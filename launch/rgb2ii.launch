@@ -1,0 +1,14 @@
+<!-- -*- mode: XML -*- -->
+<!-- Author : Alexander Carballo, Nagoya University  -->
+
+<launch>
+
+  <arg name="image" default="/image_raw" doc="Topic name of the input image"/>
+  <arg name="alpha" default="0.394" doc="Alpha value for the II transformation"/>
+
+  <node pkg="rgb2ii" type="rgb2ii" name="rgb2ii" output="screen" >
+    <param name="image" value="$(arg image)"/>
+    <param name="alpha" value="$(arg alpha)"/>
+  </node>
+
+</launch>
