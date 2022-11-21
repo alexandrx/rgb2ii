@@ -20,7 +20,14 @@ mkdir <ROS-WORKSPACE>/rgb2ii/src -p
 cd <ROS-WORKSPACE>/rgb2ii/src
 git clone <THIS-CODE-REPOSITORY>
 cd ../
+```
+To build in ROS1 use:
+```
 catkin build  # <- you can also use: colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+or
+```
+catkin_make
 ```
 
 ## Usage
@@ -41,3 +48,4 @@ You can use RVIZ to visualize both the input image and its corresponding II resu
 ## TODO
 - [x] Add ROS support
 - [ ] The method is quite heavy for its use of np.log of the image, other acceleration is necessary
+- [ ] Create a database of alpha values for many cameras
